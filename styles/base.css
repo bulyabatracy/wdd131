@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* HEADER */
+header {
+    background-color: #1f4c6b;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    display: block;
+}
+
+#course-title {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* NAV */
+nav {
+    gap: 2rem;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    /* or space-between */
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN */
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* GRID LAYOUT */
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.card h2 {
+    text-align: center;
+    background-color: #1f4c6b;
+    color: white;
+}
+
+
+
+/* ABOUT SECTION */
+.about {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+
+.about img {
+    width: 120px;
+    height: auto;
+}
+
+/* LOCATION */
+.location {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.location img {
+    width: 80px;
+}
+
+/* LIST */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background-color: #1f4c6b;
+    color: white;
+    padding: 1rem;
+}
