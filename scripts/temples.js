@@ -1,13 +1,24 @@
 const menuButton = document.getElementById("menu");
-const nav = document.querySelector(".navigation");
+const navigation = document.querySelector(".navigation");
+
+// Hamburger Menu
 
 menuButton.addEventListener("click", () => {
-    nav.classList.toggle("open");
 
-    menuButton.textContent =
-        menuButton.textContent === "☰" ? "✖" : "☰";
+    navigation.classList.toggle("open");
+
+    if (navigation.classList.contains("open")) {
+        menuButton.textContent = "✖";
+    } else {
+        menuButton.textContent = "☰";
+    }
+
 });
 
-// Footer
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+// Footer Information
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+document.getElementById("lastModified").textContent =
+    `Last Modified: ${document.lastModified}`;

@@ -4,29 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Temple Album</title>
+
     <meta name="description"
         content="A responsive temple album showcasing beautiful temples with a mobile-friendly design and interactive navigation.">
+
     <meta name="author" content="Bulyaba Tracy">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- CSS (mobile first) -->
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
 
+    <!-- JavaScript -->
     <script src="scripts/temples.js" defer></script>
 </head>
 
 <body>
 
     <header>
-        <h2>Temple Album</h2>
+        <h1>Temple Album</h1>
 
-        <button id="menu">☰</button>
+        <button id="menu" aria-label="Menu">☰</button>
 
         <nav>
             <ul class="navigation">
@@ -40,61 +45,63 @@
     </header>
 
     <main>
-        <h1>Home</h1>
+        <h2>Home</h2>
+
         <div class="gallery">
 
             <figure>
-                <img src="images/temple.jpg" alt="Temple">
+                <img src="images/temple.jpg" alt="Salt Lake City Temple" loading="lazy">
                 <figcaption>Salt Lake City</figcaption>
             </figure>
 
             <figure>
-                <img src="images/temple1.jpg" alt="Temple">
+                <img src="images/temple1.jpg" alt="Washington Temple" loading="lazy">
                 <figcaption>Washington</figcaption>
             </figure>
 
             <figure>
-                <img src="images/temple2.jpg" alt="Temple">
+                <img src="images/temple2.jpg" alt="Accra Ghana Temple" loading="lazy">
                 <figcaption>Accra Ghana</figcaption>
             </figure>
 
             <figure>
-                <img src="images/temple3.jpg" alt="Temple">
+                <img src="images/temple3.jpg" alt="Ethiopia Temple" loading="lazy">
                 <figcaption>Ethiopia</figcaption>
             </figure>
 
             <figure>
-                <img src="images/temple4.jpg" alt="Temple">
+                <img src="images/temple4.jpg" alt="Cape Town South Africa Temple" loading="lazy">
                 <figcaption>Cape Town South Africa</figcaption>
             </figure>
 
             <figure>
-                <img src="images/temple5.jpg" alt="Temple">
+                <img src="images/temple5.jpg" alt="Dakar Senegal Temple" loading="lazy">
                 <figcaption>Dakar Senegal</figcaption>
             </figure>
 
             <figure>
-                <img src="images/temple6.jpg" alt="Temple">
+                <img src="images/temple6.jpg" alt="Kampala Uganda Temple" loading="lazy">
                 <figcaption>Kampala Uganda</figcaption>
             </figure>
 
             <figure>
-                <img src="images/temple7.jpg" alt="Temple">
+                <img src="images/temple7.jpg" alt="Nairobi Kenya Temple" loading="lazy">
                 <figcaption>Nairobi Kenya</figcaption>
             </figure>
 
             <figure>
-                <img src="images/temple8.jpg" alt="Temple">
+                <img src="images/temple8.jpg" alt="San Diego California Temple" loading="lazy">
                 <figcaption>San Diego California</figcaption>
             </figure>
 
         </div>
-
-
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> 🌸 Bulyaba Tracy 🌸</p>
+        <p>
+            &copy; <span id="year"></span> 🌸 Bulyaba Tracy 🌸 Uganda
+        </p>
+
         <p id="lastModified"></p>
     </footer>
 
