@@ -1,9 +1,10 @@
 :root {
-    --background-color: #ffffff;
-
+    --primary-color: #c00000;
+    --secondary-color: #006400;
+    --light-color: #ffffff;
 }
 
-
+/* RESET */
 
 * {
     margin: 0;
@@ -11,24 +12,85 @@
     box-sizing: border-box;
 }
 
+/* BODY */
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--background-color);
     color: black;
+    background-color: white;
 }
 
 /* HEADER */
 
 header {
-    background-color: red;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    border-bottom: 15px solid white;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 1rem;
 }
 
+/* HEADER TOP */
+
 header h1 {
-    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+/* HAMBURGER BUTTON */
+
+#menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+/* NAVIGATION LIST */
+
+.navigation {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+}
+
+/* OPEN MENU */
+
+.navigation.open {
+    display: flex;
+}
+
+/* X BUTTON */
+
+#menu.open::before {
+    content: "✖";
+}
+
+/* NAV LINKS */
+
+.navigation a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: darkred;
 }
 
 /* MAIN */
@@ -37,8 +99,11 @@ main {
     position: relative;
 }
 
+/* HERO IMAGE */
+
 picture img {
     width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -46,22 +111,27 @@ picture img {
 
 .card {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 1.5rem;
     margin: 1rem;
+    padding: 1.5rem;
     text-align: center;
+    border-radius: 8px;
 }
+
+/* CARD HEADINGS */
 
 .card h2 {
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
+
+/* CARD TEXT */
 
 .card p {
     margin: 0.7rem 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
-/* WEATHER ICON MOBILE */
+/* WEATHER ICON */
 
 .weather-icon {
     width: 80px;
@@ -71,25 +141,54 @@ picture img {
 /* FOOTER */
 
 footer {
-    background-color: red;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 2rem;
-    font-size: 1.2rem;
+    padding: 1.5rem;
+    font-size: 1rem;
 }
 
-/* LARGE SCREEN */
+/* LARGE VIEW */
 
 @media screen and (min-width: 768px) {
 
-    main {
-        position: relative;
+    /* HEADER LAYOUT */
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
+
+    header h1 {
+        margin-bottom: 0;
+    }
+
+    /* HIDE HAMBURGER */
+
+    #menu {
+        display: none;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    /* CARDS OVER IMAGE */
 
     .card {
         position: absolute;
         width: 300px;
-        background-color: rgba(255, 255, 255, 0.85);
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     .data {
@@ -102,21 +201,23 @@ footer {
         right: 20px;
     }
 
+    /* CARD HEADERS */
+
     .card h2 {
-        background-color: darkgreen;
+        background-color: var(--secondary-color);
         color: white;
         padding: 1rem;
         margin: -1.5rem -1.5rem 1rem -1.5rem;
         text-align: left;
     }
 
-    /* Desktop Weather Emoji */
+    /* WEATHER EMOJI */
 
     .weather h2::after {
         content: " ❄️";
     }
 
-    /* Hide SVG icon on desktop */
+    /* HIDE SVG ON DESKTOP */
 
     .weather-icon {
         display: none;

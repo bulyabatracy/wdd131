@@ -7,11 +7,14 @@
 
     <title>Canada</title>
 
-    <meta name="description" content="A webpage about Canada including country information and weather.">
+    <meta name="description"
+        content="A responsive webpage about Canada featuring country information, weather, and responsive navigation.">
+
     <meta name="author" content="Bulyaba Tracy">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -21,24 +24,49 @@
 
     <!-- JavaScript -->
     <script src="scripts/place.js" defer></script>
+
 </head>
 
 <body>
 
     <header>
+
         <h1>Canada</h1>
+
+        <!-- Hamburger Button -->
+        <button id="menu" aria-label="Menu"></button>
+
+        <!-- Navigation -->
+        <nav>
+
+            <ul class="navigation">
+
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#">Places</a></li>
+
+                <li><a href="#">Weather</a></li>
+
+                <li><a href="#">Culture</a></li>
+
+            </ul>
+
+        </nav>
+
     </header>
 
     <main>
 
         <!-- Hero Image -->
         <picture>
+
             <source media="(min-width: 768px)" srcset="images/canada-large.webp">
 
             <img src="images/canada-small.webp" alt="Beautiful scenery in Canada">
+
         </picture>
 
-        <!-- Data Section -->
+        <!-- Data Card -->
         <section class="card data">
 
             <h2>Data</h2>
@@ -61,19 +89,26 @@
 
         </section>
 
+        <!-- Weather Card -->
         <section class="card weather">
 
             <h2>Weather</h2>
 
             <img src="images/weather-icon.svg" alt="Weather icon" class="weather-icon">
 
-            <p><strong>Temperature:</strong> <span id="temp">2</span> °C</p>
+            <p><strong>Temperature:</strong>
+                <span id="temp">2</span> °C
+            </p>
 
             <p><strong>Conditions:</strong> Snowy</p>
 
-            <p><strong>Wind:</strong> <span id="speed">15</span> km/h</p>
+            <p><strong>Wind:</strong>
+                <span id="speed">15</span> km/h
+            </p>
 
-            <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+            <p><strong>Wind Chill:</strong>
+                <span id="windchill"></span>
+            </p>
 
         </section>
 
@@ -82,7 +117,8 @@
     <footer>
 
         <p>
-            &copy;<span id="currentyear"></span>
+            &copy;
+            <span id="currentyear"></span>
             🍁 Bulyaba Tracy 🍁 Canada
         </p>
 
