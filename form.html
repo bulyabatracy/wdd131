@@ -1,4 +1,3 @@
-<!-- form.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,8 +7,12 @@
 
     <title>Product Review Form</title>
 
-    <meta name="description" content="Product review form page">
+    <meta name="description"
+        content="Submit a product review form with ratings, useful features, installation date, and written feedback.">
+
     <meta name="author" content="Bulyaba Tracy">
+
+    <meta name="theme-color" content="#4b004f">
 
     <link rel="stylesheet" href="styles/form.css">
 
@@ -23,116 +26,132 @@
     </header>
 
     <main>
+
         <form method="get" action="review.html" class="review-form">
 
             <!-- Product Name -->
             <div class="form-group">
+
                 <label for="productName">
                     Product Name <span class="required">*</span>
                 </label>
 
                 <select id="productName" name="productName" required>
+
                     <option value="" disabled selected>
                         Select a Product ...
                     </option>
+
                 </select>
+
             </div>
 
             <!-- Overall Rating -->
             <fieldset class="rating-group">
+
                 <legend>
                     Overall Rating <span class="required">*</span>
                 </legend>
 
                 <div class="stars">
 
-                    <label for="rating1">
-                        ☆
+                    <div class="star-option">
+                        <label for="rating1">☆</label>
                         <input type="radio" id="rating1" name="rating" value="1" required>
-                    </label>
+                    </div>
 
-                    <label for="rating2">
-                        ☆☆
-                        <input type="radio" id="rating2" name="rating" value="2">
-                    </label>
+                    <div class="star-option">
+                        <label for="rating2">☆☆</label>
+                        <input type="radio" id="rating2" name="rating" value="2" required>
+                    </div>
 
-                    <label for="rating3">
-                        ☆☆☆
-                        <input type="radio" id="rating3" name="rating" value="3">
-                    </label>
+                    <div class="star-option">
+                        <label for="rating3">☆☆☆</label>
+                        <input type="radio" id="rating3" name="rating" value="3" required>
+                    </div>
 
-                    <label for="rating4">
-                        ☆☆☆☆
-                        <input type="radio" id="rating4" name="rating" value="4">
-                    </label>
+                    <div class="star-option">
+                        <label for="rating4">☆☆☆☆</label>
+                        <input type="radio" id="rating4" name="rating" value="4" required>
+                    </div>
 
-                    <label for="rating5">
-                        ☆☆☆☆☆
-                        <input type="radio" id="rating5" name="rating" value="5">
-                    </label>
+                    <div class="star-option">
+                        <label for="rating5">☆☆☆☆☆</label>
+                        <input type="radio" id="rating5" name="rating" value="5" required>
+                    </div>
 
                 </div>
+
             </fieldset>
 
-            <!-- Date -->
+            <!-- Installation Date -->
             <div class="form-group">
+
                 <label for="installDate">
                     Date of Installation <span class="required">*</span>
                 </label>
 
                 <input type="date" id="installDate" name="installDate" required>
+
             </div>
 
             <!-- Features -->
             <fieldset class="features-group">
+
                 <legend>
                     Which features did you find useful in the product?
                     <em>(Check all that apply)</em>
                 </legend>
 
-                <label>
+                <div class="feature-item">
                     <input type="checkbox" id="durability" name="features" value="Durability">
-                    Durability
-                </label>
+                    <label for="durability">Durability</label>
+                </div>
 
-                <label>
+                <div class="feature-item">
                     <input type="checkbox" id="ease" name="features" value="Ease of Use">
-                    Ease of Use
-                </label>
+                    <label for="ease">Ease of Use</label>
+                </div>
 
-                <label>
+                <div class="feature-item">
                     <input type="checkbox" id="performance" name="features" value="Performance">
-                    Performance
-                </label>
+                    <label for="performance">Performance</label>
+                </div>
 
-                <label>
+                <div class="feature-item">
                     <input type="checkbox" id="design" name="features" value="Design">
-                    Design
-                </label>
+                    <label for="design">Design</label>
+                </div>
+
             </fieldset>
 
             <!-- Written Review -->
             <div class="form-group">
-                <label for="review">
+
+                <label for="writtenReview">
                     Written Review
                 </label>
 
-                <textarea id="review" name="review" rows="6"></textarea>
+                <textarea id="writtenReview" name="writtenReview" rows="6"></textarea>
+
             </div>
 
-            <!-- Name -->
+            <!-- User Name -->
             <div class="form-group">
-                <label for="username">
+
+                <label for="userName">
                     Your Name
                 </label>
 
-                <input type="text" id="username" name="username">
+                <input type="text" id="userName" name="userName" autocomplete="name">
+
             </div>
 
             <!-- Submit -->
             <input type="submit" value="Post Review" class="submit-btn">
 
         </form>
+
     </main>
 
     <footer>
