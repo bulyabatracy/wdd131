@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #c00000;
-    --secondary-color: #006400;
+    --accent2-color: #c00000;
+    --accent1-color: #006400;
     --light-color: #ffffff;
 }
 
@@ -23,7 +23,7 @@ body {
 /* HEADER */
 
 header {
-    background-color: var(--primary-color);
+    background-color: var(--accent2-color);
     color: var(--light-color);
     padding: 1rem;
 }
@@ -90,7 +90,7 @@ nav {
 }
 
 .navigation a:hover {
-    background-color: darkred;
+    background-color: var(--accent2-color);
 }
 
 /* MAIN */
@@ -141,7 +141,7 @@ picture img {
 /* FOOTER */
 
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--accent2-color);
     color: white;
     text-align: center;
     padding: 1.5rem;
@@ -204,7 +204,7 @@ footer {
     /* CARD HEADERS */
 
     .card h2 {
-        background-color: var(--secondary-color);
+        background-color: var(--accent1-color);
         color: white;
         padding: 1rem;
         margin: -1.5rem -1.5rem 1rem -1.5rem;
