@@ -1,0 +1,183 @@
+/* styles/form.css */
+
+:root {
+    --primary-color: #4b004f;
+    --secondary-color: #ece7ec;
+    --accent-color: #ffffff;
+    --text-color: #111111;
+    --border-color: #bbbbbb;
+
+    --heading-font: Arial, Helvetica, sans-serif;
+    --body-font: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: #f7f7f7;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Header */
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+}
+
+/* Main */
+
+main {
+    max-width: 700px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+/* Form */
+
+.review-form {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.form-group,
+fieldset {
+    margin-bottom: 1.5rem;
+    border: none;
+}
+
+label,
+legend {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.required {
+    color: #b00020;
+}
+
+/* Inputs */
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #999;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+/* Rating */
+
+.stars {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.stars label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/* Features */
+
+.features-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.features-group input {
+    width: 20px;
+    height: 20px;
+}
+
+/* Submit Button */
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #320035;
+}
+
+/* Confirmation */
+
+.confirmation {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.confirmation h2 {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.3rem;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 768px) {
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .review-form {
+        padding: 2rem;
+    }
+
+    .submit-btn {
+        font-size: 1.2rem;
+    }
+}
