@@ -28,15 +28,14 @@ h3 {
 }
 
 section {
-    background-color: white;
+    background: white;
     padding: 20px;
     margin-bottom: 20px;
     border-left: 5px solid #D4A017;
-    border-radius: 8px;
 }
 
 pre {
-    background-color: #eeeeee;
+    background: #eeeeee;
     padding: 10px;
     overflow-x: auto;
 }
