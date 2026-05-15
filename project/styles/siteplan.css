@@ -19,12 +19,14 @@ main {
     margin: auto;
     padding: 20px;
 }
+
 h1,
 h2,
 h3 {
     font-family: 'Poppins', sans-serif;
     color: #1B4332;
 }
+
 section {
     background: white;
     padding: 20px;
