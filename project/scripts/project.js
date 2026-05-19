@@ -38,4 +38,15 @@ function displayParks() {
     if (parksContainer) {
 
         parks.forEach((park) => {
-           
+
+            console.log(park);
+
+        });
+
+    }
+
+}
+
+
+
+

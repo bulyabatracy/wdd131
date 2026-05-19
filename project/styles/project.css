@@ -1,31 +1,53 @@
+:root {
+    --primary-color: #1B4332;
+    --background-color: #F8F5F0;
+    --text-color: #222222;
+    --card-color: white;
+    --shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--body-font);
     margin: 0;
-    background-color: #F8F5F0;
-    color: #222222;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
-header,
-footer {
-    background-color: #1B4332;
+header {
+    background-color: var(--primary-color);
     color: white;
-    text-align: center;
     padding: 1rem;
 }
 
-nav ul {
-    list-style: none;
+nav {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
-nav a {
-    color: white;
+.navigation a {
+    display: block;
+    padding: 1rem;
     text-decoration: none;
+    color: white;
     font-weight: bold;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    background-color: var(--primary-color);
 }
 
 main {
@@ -51,10 +73,10 @@ main {
 }
 
 .card {
-    background-color: white;
+    background-color: var(--card-color);
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
 }
 
 .card img {
@@ -65,7 +87,24 @@ main {
 form {
     display: grid;
     gap: 1rem;
-    background-color: white;
+    background-color: var(--card-color);
     padding: 20px;
     border-radius: 10px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    color: #FFD166;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: white;
 }
