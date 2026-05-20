@@ -1,8 +1,9 @@
 :root {
     --primary-color: #1B4332;
+    --secondary-color: #2D6A4F;
     --background-color: #F8F5F0;
     --text-color: #222222;
-    --card-color: white;
+    --card-color: #FFFFFF;
     --shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
     --heading-font: 'Poppins', sans-serif;
@@ -17,11 +18,20 @@ body {
     line-height: 1.6;
 }
 
+/* HEADER */
+
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
+
+header h1 {
+    margin: 0;
+    font-family: var(--heading-font);
+}
+
+/* NAVIGATION */
 
 nav {
     width: 100%;
@@ -37,34 +47,61 @@ nav {
     padding: 0;
 }
 
+.navigation li {
+    margin-left: 1rem;
+}
+
 .navigation a {
     display: block;
     padding: 1rem;
     text-decoration: none;
     color: white;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .navigation a:hover,
 .navigation a:focus {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
 }
+
+/* MAIN CONTENT */
 
 main {
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 20px;
-    max-width: 1200px;
-    margin: auto;
 }
 
-.hero img {
-    width: 100%;
-    border-radius: 10px;
+section {
+    margin-bottom: 2rem;
 }
+
+.hero,
+.grid,
+form {
+    width: 100%;
+}
+
+/* HERO */
 
 .hero-text {
     text-align: center;
     padding: 1rem;
 }
+
+.hero-text h2 {
+    font-family: var(--heading-font);
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* GRID LAYOUT */
 
 .grid {
     display: grid;
@@ -72,17 +109,34 @@ main {
     gap: 20px;
 }
 
+/* CARDS */
+
 .card {
     background-color: var(--card-color);
     padding: 1rem;
     border-radius: 10px;
     box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
 }
 
 .card img {
     width: 100%;
     border-radius: 10px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
+
+
+.card h2,
+.card h3 {
+    font-family: var(--heading-font);
+}
+
+/* FORM */
 
 form {
     display: grid;
@@ -90,7 +144,30 @@ form {
     background-color: var(--card-color);
     padding: 20px;
     border-radius: 10px;
+    box-shadow: var(--shadow);
 }
+
+input,
+textarea,
+button {
+    padding: 10px;
+    font-size: 1rem;
+    font-family: var(--body-font);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* FOOTER */
 
 footer {
     background-color: var(--primary-color);
@@ -107,4 +184,30 @@ footer a {
 
 footer a:hover {
     color: white;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        justify-content: center;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation li {
+        margin-left: 0;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    main {
+        padding: 15px;
+    }
 }
